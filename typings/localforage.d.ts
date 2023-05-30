@@ -62,9 +62,9 @@ interface LocalForageDriver extends LocalForageDriverDbMethods {
 }
 
 interface LocalForageSerializer {
-    serialize<T>(value: T | ArrayBuffer | Blob, callback: (value: string, error: any) => void): void;
+    serialize<T>(value: T | ArrayBuffer, callback: (value: string, error: any) => void): void;
 
-    deserialize<T>(value: string): T | ArrayBuffer | Blob;
+    deserialize<T>(value: string): T | ArrayBuffer;
 
     stringToBuffer(serializedString: string): ArrayBuffer;
 
